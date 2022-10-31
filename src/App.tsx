@@ -14,7 +14,6 @@ function App() {
   const Data = apiGet({ url })
   useEffect(() => {
     setCoinsData(Data ? Data : [])
-    console.log(coinsData)
   })
   const lastPostIndex = currentPage * postsPerPage
   const firstPostIndex = lastPostIndex - postsPerPage
