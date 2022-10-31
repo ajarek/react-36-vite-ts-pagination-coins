@@ -11,17 +11,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsl(174, 100%, 88%);
+  background-color: hsl(221, 51%, 16%);
 }
 #root {
   max-width: 1280px;
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-}
-.wrapper {
-  display:grid;
-  grid-template-columns: repeat(5,1fr);
- 
-
 }

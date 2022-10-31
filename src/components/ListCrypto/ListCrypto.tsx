@@ -1,26 +1,28 @@
-import React from 'react'
+import './ListCrypto.css'
 interface Person {
   name: string
   image: string
+  current_price: number
 }
-const ListCrypto = () => {
+type Props = {
+  data: []
+}
+export const ListCrypto = ({ data }: Props) => {
   return (
     <div className={'wrapper'}>
       {data &&
         data.map((coin: Person, index: number) => {
-          console.log(typeof coin)
-
           return (
             <div
               className={'card'}
               key={index + 1}
             >
-              <p>{coin.name}</p>
               <img
                 src={coin.image}
-                alt='{coin.name}'
-                style={{ width: '10%' }}
+                alt={coin.name}
               />
+              <h4>{coin.name}</h4>
+              <h5>${coin.current_price.toFixed(2)}</h5>
             </div>
           )
         })}
